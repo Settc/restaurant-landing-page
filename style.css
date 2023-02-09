@@ -1,0 +1,19 @@
+:root {
+    --colorGold:rgb(255, 182, 0);
+    --colorRed:rgb(215, 0, 0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {    
+    max-height: 5em;
+    background-color: rgb(3, 3, 3);
+    padding: 2em;
+    color: var(--colorGold);
+    display: flex;
+    justify-content: space-around;
+}
