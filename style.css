@@ -1,32 +1,48 @@
 :root {
     --colorGold:rgb(255, 182, 0);
     --colorRed:rgb(215, 0, 0);
+    --colorBlack: rgb(20,20,20);
     font-family: 'Bebas Neue', cursive;
 }
 
 body {
     margin: 0;
-    padding: 0;   
+     
     overflow-x: hidden;
     background-color: #080808;
     
+
+
 }
 
-.main-quote {
-   min-height: 20vh; 
+a {
+    color: var(--colorGold);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-quote {    
+    border-top: 3px solid var(--colorRed);    
+}
+
+.quote {
+   /* min-height: 30vh;  */
+   margin-top: 20px;
    width: 100vw; 
-   font-size: 3.5em; 
+   font-size: 6.5em; 
    text-align: center;
-   color: #080808;
+   color: antiquewhite;
    z-index: 2;
    position: absolute;
    text-shadow: 5px 5px var(--colorRed);
-   border-top: 3px solid var(--colorRed);
+   
 }
 
 .quote-source {
     padding: 5px;
-    border-bottom: 3px solid var(--colorGold);
+    
+    
     
 }
 
@@ -39,6 +55,10 @@ body {
     background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     
 }
 
@@ -53,6 +73,7 @@ body {
     color: var(--colorGold);
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     z-index: 3;
     
     
@@ -71,7 +92,7 @@ body {
     display: none;
 }
 
-h3:hover {
+a:hover {
     filter: drop-shadow(0 0 0.75rem var(--colorGold))
 }
 
@@ -94,60 +115,35 @@ h3:hover {
     background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
     
 }
 
 .third-bg {
-    height: 30vh;
+    height: 40vh;
     width: 100vw;
     position: absolute;
     background-image: url("static/fried-chicken.jpg");
     background-blend-mode: multiply;
     background-attachment: fixed;
+    border-bottom: 3px solid var(--colorGold);
 }
 
-.custom-shape-divider-top-1675908136 {
-    position: fixed;
-    margin-top: 8em;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    z-index: 1;
-
+.copy-header {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 3.5em;
+    color: rgba(230, 230, 230, .9);
+    text-shadow: 5px 5px var(--colorBlack);
+    margin-left: 2rem;
+    margin-top: 2em;
 }
 
-.custom-shape-divider-top-1675908136 svg {
-    position: relative;
-    display: block;
-    width: calc(200% + 1.3px);
-    height: 500px;
-    z-index: 1;
-}
-
-.custom-shape-divider-top-1675908136 .shape-fill {
-    fill: #080808;
-    z-index: 1;
-}
-
-.custom-shape-divider-top-1675913166 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1675913166 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 500px;
-}
-
-.custom-shape-divider-top-1675913166 .shape-fill {
-    fill: #080808;
+.copy-body {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 2.5em;
+    color: rgba(230, 230, 230, .9);
+    text-shadow: 5px 5px var(--colorBlack);
+    margin-left: 2rem;
+    
 }
