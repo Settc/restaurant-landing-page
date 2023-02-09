@@ -6,41 +6,51 @@
 
 body {
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0;   
     overflow-x: hidden;
     background-color: #080808;
     
 }
 
-hr {
-    position: absolute;
+.main-quote {
+   min-height: 20vh; 
+   width: 100vw; 
+   font-size: 3.5em; 
+   text-align: center;
+   color: antiquewhite;
+   z-index: 2;
+   position: absolute;
 }
 
-.main {
-    
+.quote-source {
+    font-family: 'Yantramanav', sans-serif;
 }
 
 .container {
     margin: 0 auto;
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--colorRed);
     max-width: 1400px;
     background-image: url("static/restaurant-background.jpg");
     background-size: cover;
     background-blend-mode: multiply;
+    background-attachment: fixed;
+    
 }
 
 .navbar {
     
+    min-width: 1400px;
     max-height: 4em;
     background-color: #080808;    
     padding: 2em;
     color: var(--colorGold);
     display: flex;
     justify-content: space-evenly;
-    z-index: 2;
-    position: relative;
+    z-index: 3;
+    position: fixed;
+    
+    
 }
 
 .restaurant-name {
@@ -50,15 +60,51 @@ hr {
         
 }
 
-.custom-shape-divider-top-1675908136 {
+.roar {
     position: absolute;
+    display: none;
+}
+
+h3:hover {
+    filter: drop-shadow(0 0 0.75rem var(--colorGold))
+}
+
+.restaurant-name:hover {
+    filter: drop-shadow(0 0 0.75rem var(--colorRed))
+}
+
+.restaurant-name:hover ~ .roar {
+    display: inline;
+    filter: drop-shadow(0 0 0.75rem var(--colorGold))
+}
+
+.second-bg {
+    margin-top: 30em;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("static/sushi.jpg.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
     
+}
+
+.second-bg-image {
+    position: absolute;
+    z-index: 4;
+}
+
+.custom-shape-divider-top-1675908136 {
+    position: fixed;
+    margin-top: 8em;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
     z-index: 1;
+
 }
 
 .custom-shape-divider-top-1675908136 svg {
@@ -72,4 +118,25 @@ hr {
 .custom-shape-divider-top-1675908136 .shape-fill {
     fill: #080808;
     z-index: 1;
+}
+
+.custom-shape-divider-top-1675913166 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1675913166 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-top-1675913166 .shape-fill {
+    fill: #080808;
 }
