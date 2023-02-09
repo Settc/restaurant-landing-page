@@ -1,19 +1,75 @@
 :root {
     --colorGold:rgb(255, 182, 0);
     --colorRed:rgb(215, 0, 0);
+    font-family: 'Bebas Neue', cursive;
 }
 
 body {
     margin: 0;
     padding: 0;
+    text-align: center;
     overflow-x: hidden;
+    background-color: #080808;
+    
 }
 
-.navbar {    
-    max-height: 5em;
-    background-color: rgb(3, 3, 3);
+hr {
+    position: absolute;
+}
+
+.main {
+    
+}
+
+.container {
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--colorRed);
+    max-width: 1400px;
+    background-image: url("static/restaurant-background.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.navbar {
+    
+    max-height: 4em;
+    background-color: #080808;    
     padding: 2em;
     color: var(--colorGold);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    z-index: 2;
+    position: relative;
+}
+
+.restaurant-name {
+    font-size: 2em;
+    margin-top: .3em;
+    color: var(--colorRed);
+        
+}
+
+.custom-shape-divider-top-1675908136 {
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.custom-shape-divider-top-1675908136 svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1.3px);
+    height: 500px;
+    z-index: 1;
+}
+
+.custom-shape-divider-top-1675908136 .shape-fill {
+    fill: #080808;
+    z-index: 1;
 }
